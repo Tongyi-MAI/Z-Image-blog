@@ -472,3 +472,16 @@ body.lb-disable-scrolling {
 .lightboxOverlay {
   background-color: rgba(0, 0, 0, 0.85);
 }
+
+/* 新增：为图片卡片添加可点击的链接覆盖层 */
+.showcase-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* z-index 确保链接在最上层，使整个卡片都可点击 */
+    z-index: 3;
+    /* 继承父元素的圆角，确保覆盖层也被裁剪 */
+    border-radius: 16px; 
+}
