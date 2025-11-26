@@ -6,6 +6,10 @@
     <title>Z-Image - Efficient Image Generation with Single-Stream Diffusion</title>
     <meta name="description" content="Z-Image: A powerful and efficient 6B-parameter image generation model with support for bilingual instructions and fast inference.">
     <link rel="stylesheet" href="style.css">
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
 
@@ -23,8 +27,69 @@
         <div class="container">
             <div class="text-block">
                 <h2>Introduction</h2>
-                <p>Welcome to the official repository for the Z-Image project! This is your central hub for everything related to the Z-Image model and its core technologies.</p>
-                <p class="zh">欢迎来到 Z-Image 项目的官方仓库！这是您获取 Z-Image 模型及其核心技术相关信息的中心枢纽。</p>
+                <p>Welcome to the official repository for the Z-Image project! This is your central hub for everything related to the Z-Image model and its core technologies. We are pleased to introduce Z-Image, an efficient 6-billion-parameter foundation model for image generation. It demonstrates that through systematic optimization, state-of-the-art performance can be achieved with a moderately sized model and reasonable resource consumption. Z-Image shows strong results in photorealistic image generation and bilingual text rendering, with quality comparable to leading commercial models.</p>
+                <p class="zh">欢迎来到 Z-Image 项目的官方仓库！这是您获取 Z-Image 模型及其核心技术相关信息的中心枢纽。我们很高兴地推出 Z-Image，一个高效的 60亿参数 图像生成基础模型。它证明了通过系统性的优化，中等规模的模型和合理的资源消耗同样能实现世界一流的性能。Z-Image 在照片级真实感图像生成和中英双语文本渲染方面效果突出，其品质可与顶级商业模型相媲美。</p>
+                <p>We are publicly releasing two sub-models based on Z-Image: the image generation model Z-Image-Turbo and the image editing model Z-Image-Edit. The model code, weights, and an online demo are available for the community to explore and use. We hope to jointly promote the development of accessible, low-cost, yet high-performance generative models.   </p>
+                <p>我们公开发布基于 Z-Image 的两个子模型：图像生成模型 Z-Image-Turbo 和图像编辑模型 Z-Image-Edit。模型代码、权重及在线演示均已开放，欢迎社区体验和使用，共同推动普惠、低成本且性能顶尖的生成模型发展。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Features Showcase Section -->
+    <section class="features-showcase">
+        <div class="container">
+            <h2>Core Features</h2>
+            <p class="subtitle">A glance at the powerful capabilities of the Z-Image model.</p>
+            <div class="showcase-grid">
+                <!-- Item 1 -->
+                <div class="showcase-item item-wide" style="background-image: url('images/0.png');">
+                    <div class="item-content">
+                        <h3>Photorealistic Quality</h3>
+                        <p>Photography-level realism</p>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="showcase-item light-bg">
+                    <div class="item-content">
+                        <h3>8 NFEs</h3>
+                        <p>Ultra-fast inference speed</p>
+                    </div>
+                </div>
+                 <!-- Item 3 -->
+                <div class="showcase-item light-bg">
+                    <div class="item-content">
+                        <h3>6B+</h3>
+                        <p>Parameters</p>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="showcase-item item-large" style="background-image: url('images/2.png');">
+                    <div class="item-content center-content">
+                        <h2>Z-Image</h2>
+                        <p>Single-Stream Diffusion</p>
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="showcase-item item-tall" style="background-image: url('images/1.png');">
+                     <div class="item-content">
+                        <h3>Bilingual Text</h3>
+                        <p>Accurate text rendering</p>
+                    </div>
+                </div>
+                <!-- Item 6 -->
+                 <div class="showcase-item item-wide" style="background-image: url('images/5.png');">
+                     <div class="item-content">
+                        <h3>World Knowledge</h3>
+                        <p>Deep semantic understanding</p>
+                    </div>
+                </div>
+                <!-- Item 7 -->
+                <div class="showcase-item light-bg">
+                    <div class="item-content">
+                        <h3>Image Editing</h3>
+                        <p>Creative single-image edits</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -75,6 +140,98 @@
         </div>
     </section>
 
+    <section class="reality">
+        <div class="container">
+            <div class="text-block">
+                <h2>Efficient Photorealistic Quality 极致高效的照片级真实感</h2>
+                <p>Z-Image-Turbo excels at producing images with photography-level realism, demonstrating fine control over details, lighting, and textures. It balances high fidelity with strong aesthetic quality in composition and overall mood. The generated images are not only realistic but also visually appealing.</p>
+                <p class="zh">Z-Image-Turbo 擅长生成具有摄影级别真实感的图像，能够精细控制画面的细节、光影和纹理。它在保证高保真度的同时，兼顾了构图与整体氛围上的美学表现。这使其生成的图像不仅真实，还富有视觉吸引力。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 新增：走马灯画廊区 -->
+    <section class="gallery-carousel">
+        <div class="container">
+            <h2>Gallery 展示图集</h2>
+            <p>Click any image to view in full size 点击任意图片查看大图</p>
+
+            <!-- Swiper Container -->
+            <div class="swiper gallery-swiper">
+                <div class="swiper-wrapper">
+                    <!-- 图片项 -->
+                    <div class="swiper-slide">
+                        <a href="images/0.png" data-lightbox="gallery" data-title="Photo Realism 1">
+                            <img src="images/0.png" alt="Realistic Image 1" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="images/1.png" data-lightbox="gallery" data-title="Photo Realism 2">
+                            <img src="images/1.png" alt="Realistic Image 2" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="images/2.png" data-lightbox="gallery" data-title="Photo Realism 3">
+                            <img src="images/2.png" alt="Realistic Image 3" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="images/3.png" data-lightbox="gallery" data-title="Photo Realism 4">
+                            <img src="images/3.png" alt="Realistic Image 4" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="images/4.png" data-lightbox="gallery" data-title="Photo Realism 5">
+                            <img src="images/4.png" alt="Realistic Image 5" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="images/5.png" data-lightbox="gallery" data-title="Photo Realism 6">
+                            <img src="images/5.png" alt="Realistic Image 6" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 分页器 -->
+                <div class="swiper-pagination"></div>
+
+                <!-- 导航按钮 -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bilingual">
+        <div class="container">
+            <div class="text-block">
+                <h2>Excellent Bilingual Text Rendering 卓越的中英双语文本渲染能力</h2>
+                <p>Z-Image-Turbo can accurately render Chinese and English text while preserving facial realism and overall aesthetic composition, with results comparable to top-tier closed-source models. In poster design, it demonstrates strong compositional skills and a good sense of typography. It can render high-quality text even in challenging scenarios with small font sizes, delivering designs that are both textually precise and visually compelling.</p>
+                <p class="zh">Z-Image-Turbo 能准确渲染中英文文本，同时保持人脸真实性和画面美感，效果媲美顶尖闭源模型。在海报设计中，它展现了优秀的构图能力和良好的版式设计感。即使在小字号等高难度场景下，模型也能高质量地渲染文字，最终呈现出文本精准且富有视觉吸引力的设计。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="world-knowledge">
+        <div class="container">
+            <div class="text-block">
+                <h2>Deep Semantic Understanding with World Knowledge 融合世界知识的深度语义理解</h2>
+                <p>The powerful prompt enhancer (PE) uses a structured reasoning chain to inject logic and common sense, enabling the model to handle complex tasks like the "chicken-and-rabbit problem" or visualizing classical Chinese poetry. In editing tasks, even when faced with ambiguous user instructions, the model can apply its reasoning capabilities to infer the underlying intent and ensure a logically coherent result.</p>
+                <p class="zh">强大的提示词增强器（PE）通过结构化推理链注入逻辑与常识，使模型能处理诸如鸡兔同笼”或古诗可视化等复杂任务。在编辑任务中，即使用户指令模糊不清，模型也能运用其推理能力来推断用户的潜在意图，确保最终结果在逻辑上是连贯的。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="instruction-following">
+        <div class="container">
+            <div class="text-block">
+                <h2>Strong Instruction-Following and Creative Editing 强大的指令遵循与创意编辑</h2>
+                <p>Z-Image-Edit can precisely execute complex instructions, such as simultaneously changing and brightening the background. It can also modify text at specified locations and maintain character consistency during significant image transformations, demonstrating fine-grained control over image elements.</p>
+                <p class="zh">Z-Image-Edit 可精准执行复合指令，如同时更换背景并把背景调亮。它还能按指定位置修改文字，并在大幅变换图像时保持人物一致性，体现对画面元素的精细控制。</p>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA / Model Zoo -->
     <section class="cta">
         <div class="container">
@@ -90,6 +247,57 @@
             <p>© 2025 Z-Image Project | <a href="https://github.com/brain_mllm/Z-Image-Homepage">GitHub</a> | <a href="mailto:contact@z-image.ai">Contact</a></p>
         </div>
     </footer>
+
+
+    <!-- 引入 Swiper JS -->
+    <script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
+    <!-- 引入 Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+    <!-- 初始化 Swiper -->
+    <script>
+        const swiper = new Swiper('.gallery-swiper', {
+            loop: true,
+            slidesPerView: 'auto',
+            spaceBetween: 16,
+            centeredSlides: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            // 响应式设置
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                },
+            },
+        });
+
+        // 初始化 Lightbox
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'disableScrolling': true,
+            'albumLabel': "Image %1 of %2"
+        });
+    </script>
 
 </body>
 </html>

@@ -185,3 +185,251 @@ footer a:hover {
         padding: 1rem;
     }
 }
+
+
+/* Gallery Carousel Section */
+.gallery-carousel {
+    padding: 4rem 2rem;
+    background: #f8f9fa;
+}
+
+.gallery-carousel h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.gallery-carousel p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Swiper 样式 */
+.gallery-swiper {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.gallery-swiper .swiper-slide {
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.gallery-swiper .swiper-slide a {
+    display: block;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+    max-width: 400px;
+}
+
+.gallery-swiper .swiper-slide a:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-swiper .swiper-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    transition: filter 0.3s;
+}
+
+.gallery-swiper .swiper-slide img:hover {
+    filter: brightness(0.95);
+}
+
+/* Swiper 分页器样式 */
+.swiper-pagination {
+    margin-top: 1rem;
+}
+
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    opacity: 0.8;
+}
+
+.swiper-pagination-bullet-active {
+    background: #2c3e50;
+    opacity: 1;
+}
+
+/* Swiper 导航按钮样式 */
+.swiper-button-prev,
+.swiper-button-next {
+    color: #2c3e50;
+    font-size: 24px;
+    background: rgba(255,255,255,0.8);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background: #2c3e50;
+    color: white;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .gallery-swiper .swiper-slide {
+        width: 90%;
+    }
+}
+
+/* NEW: Features Showcase Styles */
+.features-showcase {
+    padding: 4rem 2rem;
+    background: #fff;
+}
+
+.features-showcase h2,
+.features-showcase .subtitle {
+    text-align: center;
+}
+
+.features-showcase .subtitle {
+    color: #666;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px;
+    gap: 1rem;
+}
+
+.showcase-item {
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.showcase-item:hover {
+    transform: scale(1.03);
+    z-index: 10;
+}
+
+.showcase-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.6) 100%);
+    pointer-events: none;
+}
+
+.item-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem;
+    color: white;
+    z-index: 2;
+}
+
+.item-content h3 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.2rem;
+}
+
+.item-content p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.showcase-item.light-bg {
+    background-color: #f8f9fa;
+    background-image: none;
+}
+
+.showcase-item.light-bg::before {
+    display: none;
+}
+
+.showcase-item.light-bg .item-content {
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    top: 0;
+    padding: 1rem;
+}
+
+.showcase-item.light-bg h3 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.item-content.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    background: rgba(0,0,0,0.3);
+}
+
+.item-content.center-content h2 {
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+/* Grid item sizing */
+.item-wide { grid-column: span 2; }
+.item-tall { grid-row: span 2; }
+.item-large { grid-column: span 2; grid-row: span 2; }
+
+
+/* Responsive grid adjustments */
+@media (max-width: 992px) {
+    .showcase-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 220px;
+    }
+}
+
+@media (max-width: 576px) {
+    .features-showcase {
+        padding: 2rem 1rem;
+    }
+    .showcase-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 250px;
+    }
+    /* Reset spans for single column layout */
+    .showcase-item.item-wide,
+    .showcase-item.item-tall,
+    .showcase-item.item-large {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    .item-large .item-content.center-content h2 {
+        font-size: 2.5rem;
+    }
+}
