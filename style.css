@@ -367,26 +367,38 @@ footer a:hover {
     opacity: 1;
 }
 
-/* Swiper 导航按钮样式 */
+/* Swiper 导航按钮样式 (修改后) */
 .swiper-button-prev,
 .swiper-button-next {
-    color: #2c3e50;
-    background: rgba(255,255,255,0.9);
-    border-radius: 50%;
+    /* 移除背景、圆角和阴影 */
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+
+    /* 设置箭头为白色，并增加文字阴影以确保在任何背景上都清晰可见 */
+    color: white;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+
+    /* 保持原有的尺寸和过渡效果 */
     width: 44px;
     height: 44px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: all 0.2s;
-}
-.swiper-button-prev:after, .swiper-button-next:after {
-    font-size: 20px;
+    transition: transform 0.2s;
 }
 
+.swiper-button-prev:after, .swiper-button-next:after {
+    /* 可以适当增大箭头，让它更显眼 */
+    font-size: 28px;
+    font-weight: 600; /* 加粗一点更有质感 */
+}
+
+/* 修改悬停效果：移除背景变化，改为轻微放大 */
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-    background: #2c3e50;
-    color: white;
+    background: transparent; /* 确保悬停时也没有背景 */
+    color: white;            /* 保持箭头颜色不变 */
+    transform: scale(1.15);  /* 轻微放大，提供反馈 */
 }
+
 
 .architecture-image {
     text-align: left;
@@ -457,7 +469,7 @@ footer a:hover {
     .item-large .item-content.center-content h2 {
         font-size: 2.5rem;
     }
-    .intro, .models, .cta, .reality, .bilingual, .world-knowledge, .instruction-following, .architecture .arena{
+    .intro, .models, .cta, .reality, .bilingual, .world-knowledge, .instruction-following, .architecture .arena .summary{
         padding: 3rem 1rem;
     }
     .reality, .bilingual, .world-knowledge, .instruction-following .arena{
@@ -599,3 +611,41 @@ body.lb-disable-scrolling {
 }
 
 /* === 添加结束 === */
+
+/* === 新增：为轮播图中的图片添加描述文字样式 === */
+
+/* 首先，为图片的父容器 <a> 设置相对定位，作为文字定位的基准 */
+.gallery-swiper .swiper-slide a {
+    position: relative;
+    /* 确保 <a> 标签是块级元素并填满滑块 */
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* 然后，定义描述文字的样式和位置 */
+.slide-caption {
+    position: absolute; /* 绝对定位，相对于父容器 <a> */
+    bottom: 0;          /* 定位到父容器的底部 */
+    left: 0;            /* 从左侧开始 */
+    width: 100%;        /* 宽度撑满父容器 */
+    
+    /* 视觉样式 */
+    color: white;       /* 白色字体 */
+    font-size: 0.9rem;  /* 偏小的字体 */
+    padding: 20px 15px 12px; /* 内边距 (上/左右/下) */
+    text-align: left;   /* 文字左对齐 */
+    
+    /* 添加一个从下到上的黑色半透明渐变，确保白色文字在任何图片上都清晰可见 */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    
+    /* 确保文字在图片之上 */
+    z-index: 2;
+    
+    /* 防止文字层意外捕获鼠标事件 */
+    pointer-events: none;
+    
+    /* 确保内边距不会撑大盒子 */
+    box-sizing: border-box;
+}
+
