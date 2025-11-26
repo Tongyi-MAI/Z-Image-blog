@@ -476,7 +476,7 @@ footer a:hover {
     .intro, .models, .cta, .reality, .bilingual, .world-knowledge, .instruction-following, .architecture .arena .summary{
         padding: 3rem 1rem;
     }
-    .reality, .bilingual, .world-knowledge, .instruction-following .arena{
+    .intro, .models, .cta, .reality, .bilingual, .world-knowledge, .instruction-following, .architecture .arena .summary{
         padding-bottom: 1rem;
     }
 }
