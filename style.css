@@ -59,7 +59,7 @@ body {
     font-weight: 400;
 }
 
-.intro, .models, .cta, .reality, .bilingual, .world-knowledge, .instruction-following {
+.intro, .models, .cta, .reality, .bilingual, .world-knowledge, .instruction-following, .architecture {
     padding: 4rem 2rem;
 }
 /* 将轮播图上方的文本区域的下边距减小，使其与轮播图更紧凑 */
@@ -388,6 +388,29 @@ footer a:hover {
     color: white;
 }
 
+/* NEW: Architecture Section Styles */
+.architecture {
+    background: #fff;
+    padding-bottom: 2rem;
+}
+
+.architecture .text-block {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+}
+
+.architecture-image {
+    text-align: center;
+}
+
+.architecture-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
 /* 响应式调整 */
 @media (max-width: 992px) {
     .showcase-grid {
@@ -435,7 +458,7 @@ footer a:hover {
     .item-large .item-content.center-content h2 {
         font-size: 2.5rem;
     }
-    .intro, .models, .cta, .reality, .bilingual, .world-knowledge, .instruction-following {
+    .intro, .models, .cta, .reality, .bilingual, .world-knowledge, .instruction-following, .architecture {
         padding: 3rem 1rem;
     }
     .reality, .bilingual, .world-knowledge, .instruction-following {
@@ -450,4 +473,3 @@ body.lb-disable-scrolling {
 .lightboxOverlay {
   background-color: rgba(0, 0, 0, 0.85);
 }
-
