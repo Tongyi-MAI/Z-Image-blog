@@ -485,3 +485,103 @@ body.lb-disable-scrolling {
     /* 继承父元素的圆角，确保覆盖层也被裁剪 */
     border-radius: 16px; 
 }
+
+/* === START: Hero Links 区域完整样式 (无框版) === */
+.hero-links {
+    position: relative;
+    margin-top: 2.5rem;
+    max-width: 800px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    /* 移除了背景、边框、圆角、内边距和毛玻璃效果 */
+}
+
+.hero-link-item {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #f0f0f0;
+    /* 调整了上下内边距来控制行间距 */
+    padding: 0.5rem 0;
+}
+
+.hero-link-item.space-between {
+    justify-content: space-between;
+}
+
+/* 移除了原有的下边框样式 */
+.hero-link-item:not(:last-child) {
+    border-bottom: none;
+}
+
+.hero-link-item .left-part {
+    display: flex;
+    align-items: center;
+}
+
+.hero-link-item .icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+}
+
+.hero-link-item .icon img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    /* 保留滤镜，让深色图标变白 */
+    filter: invert(1);
+}
+
+.hero-link-item .icon img.no-invert {
+    filter: none;
+}
+
+.hero-link-item .text {
+    font-weight: 500;
+    color: white;
+    /* 给文字增加轻微阴影，提高在复杂背景下的可读性 */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.hero-link-item .url {
+    color: #a8d8ea;
+    text-decoration: none;
+    font-family: 'SF Mono', 'Menlo', 'Monaco', 'Consolas', monospace;
+    font-size: 0.9rem;
+    opacity: 0.9;
+    transition: color 0.2s, opacity 0.2s;
+    word-break: break-all;
+    margin-left: 1rem;
+    /* 给链接也增加阴影 */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.hero-link-item .url:hover {
+    color: white;
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* 响应式调整 (同样重要) */
+@media (max-width: 768px) {
+    .hero-links {
+        padding: 0; /* 确保在移动端也没有内边距 */
+    }
+    .hero-link-item.space-between {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+    .hero-link-item .url {
+       padding-left: calc(24px + 1rem);
+       margin-left: 0;
+    }
+}
+/* === END: Hero Links 区域样式 === */
