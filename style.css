@@ -585,3 +585,17 @@ body.lb-disable-scrolling {
     }
 }
 /* === END: Hero Links 区域样式 === */
+
+/* === 在这里添加新代码 === */
+
+/* 这是实现左右对齐的关键 */
+.hero-link-item.space-between {
+    justify-content: space-between;
+}
+
+/* 新增：将不包含 space-between 类的项目（即第一行）居中 */
+.hero-link-item:not(.space-between) {
+    justify-content: center;
+}
+
+/* === 添加结束 === */
