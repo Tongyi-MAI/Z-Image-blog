@@ -176,7 +176,7 @@ footer a:hover {
 }
 
 /* Features Showcase Styles */
-.features-showcase {
+/* .features-showcase {
     padding: 4rem 2rem;
     background: #fff;
 }
@@ -184,7 +184,7 @@ footer a:hover {
 .features-showcase h2,
 .features-showcase .subtitle {
     text-align: center;
-}
+} */
 
 .features-showcase .subtitle {
     color: #666;
@@ -388,27 +388,24 @@ footer a:hover {
     color: white;
 }
 
-/* NEW: Architecture Section Styles */
-.architecture {
-    background: #fff;
-    padding-bottom: 2rem;
+.architecture-image,
+.arena-image {
+    text-align: left; /* 保持原样 */
+    border-radius: 16px; /* 将圆角应用到容器上 */
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1); /* 将阴影应用到容器上 */
+    overflow: hidden; /* 关键！隐藏超出容器的部分（图片的直角） */
+    line-height: 0; /* 修复容器可能存在的微小底部空隙 */
 }
 
-.architecture .text-block {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 2rem auto;
-}
-
-.architecture-image {
-    text-align: center;
-}
-
-.architecture-image img {
+/* 让图片填满其容器 */
+.architecture-image img,
+.arena-image img {
     max-width: 100%;
     height: auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    /* 移除这里的圆角和阴影 */
+    /* border-radius: 12px; */
+    /* box-shadow: 0 8px 24px rgba(0,0,0,0.1); */
+    display: block; /* 确保图片表现为块级元素，填满空间 */
 }
 
 /* 响应式调整 */
@@ -458,10 +455,10 @@ footer a:hover {
     .item-large .item-content.center-content h2 {
         font-size: 2.5rem;
     }
-    .intro, .models, .cta, .reality, .bilingual, .world-knowledge, .instruction-following, .architecture {
+    .intro, .models, .cta, .reality, .bilingual, .world-knowledge, .instruction-following, .architecture .arena{
         padding: 3rem 1rem;
     }
-    .reality, .bilingual, .world-knowledge, .instruction-following {
+    .reality, .bilingual, .world-knowledge, .instruction-following .arena{
         padding-bottom: 1rem;
     }
 }
