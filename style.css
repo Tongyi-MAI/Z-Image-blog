@@ -41,16 +41,20 @@ body {
     background: rgba(0,0,0,0.4);
 }
 
+/* 修改后的代码：纯白色，无阴影 */
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 0.5rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    color: white; /* 确保颜色是纯白 */
+    text-shadow: none; /* 明确移除所有文字阴影 */
 }
 
 .tagline {
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 400; /* 适当加粗以提高清晰度 */
     margin-bottom: 1rem;
+    color: white; /* 确保颜色是纯白 */
+    text-shadow: none; /* 明确移除所有文字阴影 */
 }
 
 .tagline-zh {
