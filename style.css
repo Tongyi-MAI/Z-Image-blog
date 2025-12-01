@@ -473,7 +473,7 @@ footer a:hover {
     .item-large .item-content.center-content h2 {
         font-size: 2.5rem;
     }
-    .intro, .models, .cta, .reality, .bilingual, .world-knowledge, .instruction-following, .architecture .arena .summary{
+    .intro, .models, .cta, .reality, .bilingual, .world-knowledge, .instruction-following, .architecture .arena .summary .citation{
         padding: 3rem 1rem;
     }
     .intro, .models, .cta, .reality, .bilingual, .world-knowledge, .instruction-following, .architecture .arena .summary{
